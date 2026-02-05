@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>Hotel Moderation Panel</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,7 +46,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
+                    <h3 class="text-primary"><i class="fa fa-building me-2"></i>HÔTEL MODERATION</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -60,27 +60,11 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="button.html" class="dropdown-item">Buttons</a>
-                            <a href="typography.html" class="dropdown-item">Typography</a>
-                            <a href="element.html" class="dropdown-item">Other Elements</a>
-                        </div>
-                    </div>
-                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Sign In</a>
-                            <a href="signup.html" class="dropdown-item">Sign Up</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
-                        </div>
-                    </div>
+                    <a href="approvals.html" class="nav-item nav-link"><i class="fa fa-hourglass-half me-2"></i>Pending Hotels</a>
+                    <a href="approved.html" class="nav-item nav-link"><i class="fa fa-check-circle me-2"></i>Approved Hotels</a>
+                    <a href="rejected.html" class="nav-item nav-link"><i class="fa fa-times-circle me-2"></i>Rejected Hotels</a>
+                    <hr class="my-3" style="border-color: rgba(255,255,255,0.1);">
+                    <a href="signin.html" class="nav-item nav-link"><i class="fa fa-sign-out-alt me-2"></i>Log Out</a>
                 </div>
             </nav>
         </div>
@@ -180,270 +164,129 @@
             <!-- Navbar End -->
 
 
-            <!-- Sale & Revenue Start -->
+            <!-- Hotel Stats Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-line fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today Sale</p>
-                                <h6 class="mb-0">$1234</h6>
+                        <div class="kpi-card">
+                            <div class="p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <i class="fa fa-building fa-3x kpi-icon"></i>
+                                </div>
+                                <p class="kpi-label">Total Hotels</p>
+                                <h6 class="kpi-value">184</h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Sale</p>
-                                <h6 class="mb-0">$1234</h6>
+                        <div class="kpi-card">
+                            <div class="p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <i class="fa fa-hourglass-half fa-3x kpi-icon" style="color: var(--warning);"></i>
+                                </div>
+                                <p class="kpi-label">Pending Approvals</p>
+                                <h6 class="kpi-value" style="color: var(--warning);">23</h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today Revenue</p>
-                                <h6 class="mb-0">$1234</h6>
+                        <div class="kpi-card">
+                            <div class="p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <i class="fa fa-check-circle fa-3x kpi-icon" style="color: var(--success);"></i>
+                                </div>
+                                <p class="kpi-label">Approved Hotels</p>
+                                <h6 class="kpi-value" style="color: var(--success);">156</h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Revenue</p>
-                                <h6 class="mb-0">$1234</h6>
+                        <div class="kpi-card">
+                            <div class="p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <i class="fa fa-times-circle fa-3x kpi-icon" style="color: var(--danger);"></i>
+                                </div>
+                                <p class="kpi-label">Rejected Hotels</p>
+                                <h6 class="kpi-value" style="color: var(--danger);">5</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Sale & Revenue End -->
+            <!-- Hotel Stats End -->
 
 
-            <!-- Sales Chart Start -->
+            <!-- Recent Submissions Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
+                    <div class="col-12">
+                        <div style="background: #FFFFFF; border: 1px solid #E8E6E1; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Worldwide Sales</h6>
-                                <a href="">Show All</a>
+                                <h6 class="mb-0" style="color: var(--dark); font-weight: 700;">Recent Hotel Submissions</h6>
+                                <a href="approvals.html" class="btn btn-sm" style="background: var(--primary); color: var(--dark); border: none; border-radius: 8px;">View All</a>
                             </div>
-                            <canvas id="worldwide-sales"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Salse & Revenue</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="salse-revenue"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sales Chart End -->
-
-
-            <!-- Recent Sales Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Salse</h6>
-                        <a href="">Show All</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-dark">
-                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Invoice</th>
-                                    <th scope="col">Customer</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- Recent Sales End -->
-
-
-            <!-- Widgets Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-light rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="mb-0">Messages</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-light rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Calender</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div id="calender"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-light rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">To Do List</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <input class="form-control bg-transparent" type="text" placeholder="Enter task">
-                                <button type="button" class="btn btn-primary ms-2">Add</button>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox" checked>
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span><del>Short task goes here...</del></span>
-                                        <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0" style="border: none;">
+                                    <thead style="background: linear-gradient(135deg, var(--secondary) 0%, var(--primary-dark) 100%); color: white;">
+                                        <tr>
+                                            <th scope="col" style="padding: 1rem; border: none;">Hotel Name</th>
+                                            <th scope="col" style="padding: 1rem; border: none;">Location</th>
+                                            <th scope="col" style="padding: 1rem; border: none;">Submitted By</th>
+                                            <th scope="col" style="padding: 1rem; border: none;">Date</th>
+                                            <th scope="col" style="padding: 1rem; border: none;">Status</th>
+                                            <th scope="col" style="padding: 1rem; border: none;">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="border-color: #E8E6E1;">
+                                            <td style="padding: 1rem;"><strong>Le Luxury Plaza</strong></td>
+                                            <td style="padding: 1rem;">Paris, France</td>
+                                            <td style="padding: 1rem;">Marie Dupont</td>
+                                            <td style="padding: 1rem;">Jan 15, 2024</td>
+                                            <td style="padding: 1rem;"><span class="badge badge-pending">Pending</span></td>
+                                            <td style="padding: 1rem;"><a href="hotel-detail.html" class="btn btn-sm" style="background: var(--primary); color: var(--dark); border: none; border-radius: 6px; padding: 0.3rem 0.6rem;">Review</a></td>
+                                        </tr>
+                                        <tr style="border-color: #E8E6E1;">
+                                            <td style="padding: 1rem;"><strong>Seaside Resort</strong></td>
+                                            <td style="padding: 1rem;">Barcelona, Spain</td>
+                                            <td style="padding: 1rem;">Carlos Rodriguez</td>
+                                            <td style="padding: 1rem;">Jan 14, 2024</td>
+                                            <td style="padding: 1rem;"><span class="badge badge-pending">Pending</span></td>
+                                            <td style="padding: 1rem;"><a href="hotel-detail.html" class="btn btn-sm" style="background: var(--primary); color: var(--dark); border: none; border-radius: 6px; padding: 0.3rem 0.6rem;">Review</a></td>
+                                        </tr>
+                                        <tr style="border-color: #E8E6E1;">
+                                            <td style="padding: 1rem;"><strong>Alpine Retreat</strong></td>
+                                            <td style="padding: 1rem;">Zermatt, Switzerland</td>
+                                            <td style="padding: 1rem;">Hans Mueller</td>
+                                            <td style="padding: 1rem;">Jan 13, 2024</td>
+                                            <td style="padding: 1rem;"><span class="badge badge-approved">Approved</span></td>
+                                            <td style="padding: 1rem;"><span style="color: #999; font-size: 0.875rem;">—</span></td>
+                                        </tr>
+                                        <tr style="border-color: #E8E6E1;">
+                                            <td style="padding: 1rem;"><strong>Tokyo Executive</strong></td>
+                                            <td style="padding: 1rem;">Tokyo, Japan</td>
+                                            <td style="padding: 1rem;">Yuki Tanaka</td>
+                                            <td style="padding: 1rem;">Jan 12, 2024</td>
+                                            <td style="padding: 1rem;"><span class="badge badge-approved">Approved</span></td>
+                                            <td style="padding: 1rem;"><span style="color: #999; font-size: 0.875rem;">—</span></td>
+                                        </tr>
+                                        <tr style="border-color: #E8E6E1;">
+                                            <td style="padding: 1rem;"><strong>Desert Dreams</strong></td>
+                                            <td style="padding: 1rem;">Dubai, UAE</td>
+                                            <td style="padding: 1rem;">Ahmed Al-Mansouri</td>
+                                            <td style="padding: 1rem;">Jan 10, 2024</td>
+                                            <td style="padding: 1rem;"><span class="badge badge-rejected">Rejected</span></td>
+                                            <td style="padding: 1rem;"><span style="color: #999; font-size: 0.875rem;">—</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Widgets End -->
+            <!-- Recent Submissions End -->
+
 
 
             <!-- Footer Start -->
