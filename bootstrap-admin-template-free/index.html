@@ -170,9 +170,7 @@
                     <div class="col-sm-6 col-xl-3">
                         <div class="kpi-card">
                             <div class="p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <i class="fa fa-building fa-3x kpi-icon"></i>
-                                </div>
+                                <i class="fa fa-building fa-3x kpi-icon primary-gold"></i>
                                 <p class="kpi-label">Total Hotels</p>
                                 <h6 class="kpi-value">184</h6>
                             </div>
@@ -181,9 +179,7 @@
                     <div class="col-sm-6 col-xl-3">
                         <div class="kpi-card">
                             <div class="p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <i class="fa fa-hourglass-half fa-3x kpi-icon" style="color: var(--warning);"></i>
-                                </div>
+                                <i class="fa fa-hourglass-half fa-3x kpi-icon warning-gold"></i>
                                 <p class="kpi-label">Pending Approvals</p>
                                 <h6 class="kpi-value" style="color: var(--warning);">23</h6>
                             </div>
@@ -192,9 +188,7 @@
                     <div class="col-sm-6 col-xl-3">
                         <div class="kpi-card">
                             <div class="p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <i class="fa fa-check-circle fa-3x kpi-icon" style="color: var(--success);"></i>
-                                </div>
+                                <i class="fa fa-check-circle fa-3x kpi-icon success-green"></i>
                                 <p class="kpi-label">Approved Hotels</p>
                                 <h6 class="kpi-value" style="color: var(--success);">156</h6>
                             </div>
@@ -203,9 +197,7 @@
                     <div class="col-sm-6 col-xl-3">
                         <div class="kpi-card">
                             <div class="p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <i class="fa fa-times-circle fa-3x kpi-icon" style="color: var(--danger);"></i>
-                                </div>
+                                <i class="fa fa-times-circle fa-3x kpi-icon danger-red"></i>
                                 <p class="kpi-label">Rejected Hotels</p>
                                 <h6 class="kpi-value" style="color: var(--danger);">5</h6>
                             </div>
@@ -217,69 +209,71 @@
 
 
             <!-- Recent Submissions Start -->
-            <div class="container-fluid pt-4 px-4">
+            <div class="container-fluid pt-4 px-4 mb-4">
                 <div class="row g-4">
                     <div class="col-12">
-                        <div style="background: #FFFFFF; border: 1px solid #E8E6E1; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0" style="color: var(--dark); font-weight: 700;">Recent Hotel Submissions</h6>
-                                <a href="approvals.html" class="btn btn-sm" style="background: var(--primary); color: var(--dark); border: none; border-radius: 8px;">View All</a>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover mb-0" style="border: none;">
-                                    <thead style="background: linear-gradient(135deg, var(--secondary) 0%, var(--primary-dark) 100%); color: white;">
-                                        <tr>
-                                            <th scope="col" style="padding: 1rem; border: none;">Hotel Name</th>
-                                            <th scope="col" style="padding: 1rem; border: none;">Location</th>
-                                            <th scope="col" style="padding: 1rem; border: none;">Submitted By</th>
-                                            <th scope="col" style="padding: 1rem; border: none;">Date</th>
-                                            <th scope="col" style="padding: 1rem; border: none;">Status</th>
-                                            <th scope="col" style="padding: 1rem; border: none;">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr style="border-color: #E8E6E1;">
-                                            <td style="padding: 1rem;"><strong>Le Luxury Plaza</strong></td>
-                                            <td style="padding: 1rem;">Paris, France</td>
-                                            <td style="padding: 1rem;">Marie Dupont</td>
-                                            <td style="padding: 1rem;">Jan 15, 2024</td>
-                                            <td style="padding: 1rem;"><span class="badge badge-pending">Pending</span></td>
-                                            <td style="padding: 1rem;"><a href="hotel-detail.html" class="btn btn-sm" style="background: var(--primary); color: var(--dark); border: none; border-radius: 6px; padding: 0.3rem 0.6rem;">Review</a></td>
-                                        </tr>
-                                        <tr style="border-color: #E8E6E1;">
-                                            <td style="padding: 1rem;"><strong>Seaside Resort</strong></td>
-                                            <td style="padding: 1rem;">Barcelona, Spain</td>
-                                            <td style="padding: 1rem;">Carlos Rodriguez</td>
-                                            <td style="padding: 1rem;">Jan 14, 2024</td>
-                                            <td style="padding: 1rem;"><span class="badge badge-pending">Pending</span></td>
-                                            <td style="padding: 1rem;"><a href="hotel-detail.html" class="btn btn-sm" style="background: var(--primary); color: var(--dark); border: none; border-radius: 6px; padding: 0.3rem 0.6rem;">Review</a></td>
-                                        </tr>
-                                        <tr style="border-color: #E8E6E1;">
-                                            <td style="padding: 1rem;"><strong>Alpine Retreat</strong></td>
-                                            <td style="padding: 1rem;">Zermatt, Switzerland</td>
-                                            <td style="padding: 1rem;">Hans Mueller</td>
-                                            <td style="padding: 1rem;">Jan 13, 2024</td>
-                                            <td style="padding: 1rem;"><span class="badge badge-approved">Approved</span></td>
-                                            <td style="padding: 1rem;"><span style="color: #999; font-size: 0.875rem;">—</span></td>
-                                        </tr>
-                                        <tr style="border-color: #E8E6E1;">
-                                            <td style="padding: 1rem;"><strong>Tokyo Executive</strong></td>
-                                            <td style="padding: 1rem;">Tokyo, Japan</td>
-                                            <td style="padding: 1rem;">Yuki Tanaka</td>
-                                            <td style="padding: 1rem;">Jan 12, 2024</td>
-                                            <td style="padding: 1rem;"><span class="badge badge-approved">Approved</span></td>
-                                            <td style="padding: 1rem;"><span style="color: #999; font-size: 0.875rem;">—</span></td>
-                                        </tr>
-                                        <tr style="border-color: #E8E6E1;">
-                                            <td style="padding: 1rem;"><strong>Desert Dreams</strong></td>
-                                            <td style="padding: 1rem;">Dubai, UAE</td>
-                                            <td style="padding: 1rem;">Ahmed Al-Mansouri</td>
-                                            <td style="padding: 1rem;">Jan 10, 2024</td>
-                                            <td style="padding: 1rem;"><span class="badge badge-rejected">Rejected</span></td>
-                                            <td style="padding: 1rem;"><span style="color: #999; font-size: 0.875rem;">—</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="table-container">
+                            <div style="padding: 1.5rem;">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h6 class="mb-0">Recent Hotel Submissions</h6>
+                                    <a href="approvals.html" class="btn btn-primary btn-sm">View All</a>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Hotel Name</th>
+                                                <th scope="col">Location</th>
+                                                <th scope="col">Submitted By</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Le Luxury Plaza</strong></td>
+                                                <td>Paris, France</td>
+                                                <td>Marie Dupont</td>
+                                                <td>Jan 15, 2024</td>
+                                                <td><span class="badge badge-pending">Pending</span></td>
+                                                <td><a href="hotel-detail.html" class="btn btn-sm btn-review">Review</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Seaside Resort</strong></td>
+                                                <td>Barcelona, Spain</td>
+                                                <td>Carlos Rodriguez</td>
+                                                <td>Jan 14, 2024</td>
+                                                <td><span class="badge badge-pending">Pending</span></td>
+                                                <td><a href="hotel-detail.html" class="btn btn-sm btn-review">Review</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Alpine Retreat</strong></td>
+                                                <td>Zermatt, Switzerland</td>
+                                                <td>Hans Mueller</td>
+                                                <td>Jan 13, 2024</td>
+                                                <td><span class="badge badge-approved">Approved</span></td>
+                                                <td><span style="color: var(--text-secondary); font-size: 0.875rem;">—</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tokyo Executive</strong></td>
+                                                <td>Tokyo, Japan</td>
+                                                <td>Yuki Tanaka</td>
+                                                <td>Jan 12, 2024</td>
+                                                <td><span class="badge badge-approved">Approved</span></td>
+                                                <td><span style="color: var(--text-secondary); font-size: 0.875rem;">—</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Desert Dreams</strong></td>
+                                                <td>Dubai, UAE</td>
+                                                <td>Ahmed Al-Mansouri</td>
+                                                <td>Jan 10, 2024</td>
+                                                <td><span class="badge badge-rejected">Rejected</span></td>
+                                                <td><span style="color: var(--text-secondary); font-size: 0.875rem;">—</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
