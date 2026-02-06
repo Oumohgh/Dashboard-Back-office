@@ -36,7 +36,12 @@ class HotelController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required',
             'address' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+            $validated['image'] = $request->file('image')->store('hotels', 'public');
+        }
 
         Hotel::create($validated);
 
@@ -54,7 +59,15 @@ class HotelController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required',
             'address' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+            if ($hotel->image) {
+                \Storage::disk('public')->delete($hotel->image);
+            }
+            $validated['image'] = $request->file('image')->store('hotels', 'public');
+        }
 
         $hotel->update($validated);
 

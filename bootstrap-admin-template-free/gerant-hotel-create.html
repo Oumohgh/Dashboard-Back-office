@@ -119,11 +119,11 @@
                     <div class="col-lg-8">
                         <div class="table-container">
                             <div style="padding: 2rem;">
-                                <form>
+                                <form enctype="multipart/form-data">
                                     <!-- Hotel Name -->
                                     <div class="mb-3">
                                         <label for="hotelName" class="form-label" style="color: var(--text-primary); font-weight: 600;">Hotel Name *</label>
-                                        <input type="text" class="form-control" id="hotelName" placeholder="Enter your hotel name" required>
+                                        <input type="text" class="form-control" id="hotelName" name="name" placeholder="Enter your hotel name" required>
                                     </div>
 
                                     <!-- Address -->
@@ -161,15 +161,36 @@
                                         <textarea class="form-control" id="description" rows="4" placeholder="Describe your hotel..." required></textarea>
                                     </div>
 
-                                    <!-- Images Upload -->
+                                    <!-- Hotel Image -->
                                     <div class="mb-4">
-                                        <label for="images" class="form-label" style="color: var(--text-primary); font-weight: 600;">Hotel Images</label>
-                                        <div class="input-group">
-                                            <input type="file" class="form-control" id="images" multiple accept="image/*">
-                                            <label class="input-group-text" for="images">Choose files</label>
+                                        <label for="image" class="form-label" style="color: var(--text-primary); font-weight: 600;">Hotel Cover Image</label>
+                                        <div class="input-group mb-2">
+                                            <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                                            <label class="input-group-text" for="image"><i class="fa fa-upload me-1"></i>Choose file</label>
                                         </div>
-                                        <small class="text-muted d-block mt-2">Upload up to 10 images (JPG, PNG)</small>
+                                        <small class="text-muted d-block mb-2">JPG, PNG, GIF. Max 2MB</small>
+                                        <div id="imagePreview" style="max-width: 200px; max-height: 150px; overflow: hidden; border-radius: 8px; border: 2px dashed var(--border); padding: 10px; display: none;">
+                                            <img id="previewImg" src="" alt="Preview" style="width: 100%; height: 100%; object-fit: cover;">
+                                        </div>
                                     </div>
+                                    <script>
+                                        document.getElementById('image').addEventListener('change', function(e) {
+                                            const file = e.target.files[0];
+                                            const preview = document.getElementById('imagePreview');
+                                            const previewImg = document.getElementById('previewImg');
+                                            
+                                            if (file) {
+                                                const reader = new FileReader();
+                                                reader.onload = function(event) {
+                                                    previewImg.src = event.target.result;
+                                                    preview.style.display = 'block';
+                                                };
+                                                reader.readAsDataURL(file);
+                                            } else {
+                                                preview.style.display = 'none';
+                                            }
+                                        });
+                                    </script>
 
                                     <!-- Form Actions -->
                                     <div class="d-flex gap-2">
