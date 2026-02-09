@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pending Hotels - Hotel Moderation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-building me-2"></i>HÔTEL MODERATION</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0" style="color: white;">Admin User</h6>
+                        <span style="color: rgba(255,255,255,0.7);">Moderator</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="approvals.html" class="nav-item nav-link active"><i class="fa fa-hourglass-half me-2"></i>Pending Hotels</a>
+                    <a href="approved.html" class="nav-item nav-link"><i class="fa fa-check-circle me-2"></i>Approved Hotels</a>
+                    <a href="rejected.html" class="nav-item nav-link"><i class="fa fa-times-circle me-2"></i>Rejected Hotels</a>
+                    <hr class="my-3" style="border-color: rgba(255,255,255,0.1);">
+                    <a href="signin.html" class="nav-item nav-link"><i class="fa fa-sign-out-alt me-2"></i>Log Out</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-building"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search hotels...">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">Admin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="signin.html" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+            <!-- Pending Hotels Section -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h4 style="color: var(--dark); font-weight: 700;">Pending Hotel Approvals</h4>
+                        <p style="color: #999; margin-bottom: 0;">Review and manage hotel submissions awaiting approval</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Hotel Card 1 -->
+                    <div class="col-sm-12 col-lg-6 col-xl-4">
+                        <div class="hotel-card">
+                            <div class="hotel-card-image">
+                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a2332, #2c3e50); color: white; font-size: 3rem;">
+                                    <i class="fa fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="hotel-card-body">
+                                <h5 class="hotel-name">Elegant Renaissance</h5>
+                                <p class="hotel-location"><i class="fa fa-map-marker-alt me-2"></i>Venice, Italy</p>
+                                <p class="hotel-rating"><i class="fa fa-star me-2" style="color: var(--primary);"></i>4.8/5.0</p>
+                                <p style="color: #666; font-size: 0.875rem;">Luxury 5-star hotel with modern amenities and historic charm</p>
+                                <div class="mt-3 pt-3 border-top" style="border-color: var(--border);">
+                                    <p style="font-size: 0.75rem; color: #999; margin-bottom: 0.5rem;">Submitted Jan 18, 2024 by Marco Rossi</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-approve flex-grow-1"><i class="fa fa-check me-2"></i>Approve</button>
+                                        <button class="btn btn-reject flex-grow-1"><i class="fa fa-times me-2"></i>Reject</button>
+                                        <a href="hotel-detail.html" class="btn" style="background: #f0f0f0; color: var(--dark); border: none; border-radius: 8px; padding: 0.5rem 1rem; flex-grow: 1;"><i class="fa fa-eye me-2"></i>Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Card 2 -->
+                    <div class="col-sm-12 col-lg-6 col-xl-4">
+                        <div class="hotel-card">
+                            <div class="hotel-card-image">
+                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a2332, #2c3e50); color: white; font-size: 3rem;">
+                                    <i class="fa fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="hotel-card-body">
+                                <h5 class="hotel-name">Le Luxury Plaza</h5>
+                                <p class="hotel-location"><i class="fa fa-map-marker-alt me-2"></i>Paris, France</p>
+                                <p class="hotel-rating"><i class="fa fa-star me-2" style="color: var(--primary);"></i>4.9/5.0</p>
+                                <p style="color: #666; font-size: 0.875rem;">Premium Parisian hotel with world-class dining and spa facilities</p>
+                                <div class="mt-3 pt-3 border-top" style="border-color: var(--border);">
+                                    <p style="font-size: 0.75rem; color: #999; margin-bottom: 0.5rem;">Submitted Jan 15, 2024 by Marie Dupont</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-approve flex-grow-1"><i class="fa fa-check me-2"></i>Approve</button>
+                                        <button class="btn btn-reject flex-grow-1"><i class="fa fa-times me-2"></i>Reject</button>
+                                        <a href="hotel-detail.html" class="btn" style="background: #f0f0f0; color: var(--dark); border: none; border-radius: 8px; padding: 0.5rem 1rem; flex-grow: 1;"><i class="fa fa-eye me-2"></i>Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Card 3 -->
+                    <div class="col-sm-12 col-lg-6 col-xl-4">
+                        <div class="hotel-card">
+                            <div class="hotel-card-image">
+                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a2332, #2c3e50); color: white; font-size: 3rem;">
+                                    <i class="fa fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="hotel-card-body">
+                                <h5 class="hotel-name">Seaside Resort</h5>
+                                <p class="hotel-location"><i class="fa fa-map-marker-alt me-2"></i>Barcelona, Spain</p>
+                                <p class="hotel-rating"><i class="fa fa-star me-2" style="color: var(--primary);"></i>4.7/5.0</p>
+                                <p style="color: #666; font-size: 0.875rem;">Mediterranean beachfront resort with private access</p>
+                                <div class="mt-3 pt-3 border-top" style="border-color: var(--border);">
+                                    <p style="font-size: 0.75rem; color: #999; margin-bottom: 0.5rem;">Submitted Jan 14, 2024 by Carlos Rodriguez</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-approve flex-grow-1"><i class="fa fa-check me-2"></i>Approve</button>
+                                        <button class="btn btn-reject flex-grow-1"><i class="fa fa-times me-2"></i>Reject</button>
+                                        <a href="hotel-detail.html" class="btn" style="background: #f0f0f0; color: var(--dark); border: none; border-radius: 8px; padding: 0.5rem 1rem; flex-grow: 1;"><i class="fa fa-eye me-2"></i>Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Card 4 -->
+                    <div class="col-sm-12 col-lg-6 col-xl-4">
+                        <div class="hotel-card">
+                            <div class="hotel-card-image">
+                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a2332, #2c3e50); color: white; font-size: 3rem;">
+                                    <i class="fa fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="hotel-card-body">
+                                <h5 class="hotel-name">Swiss Mountain Lodge</h5>
+                                <p class="hotel-location"><i class="fa fa-map-marker-alt me-2"></i>Zermatt, Switzerland</p>
+                                <p class="hotel-rating"><i class="fa fa-star me-2" style="color: var(--primary);"></i>4.6/5.0</p>
+                                <p style="color: #666; font-size: 0.875rem;">Alpine luxury retreat with skiing and hiking access</p>
+                                <div class="mt-3 pt-3 border-top" style="border-color: var(--border);">
+                                    <p style="font-size: 0.75rem; color: #999; margin-bottom: 0.5rem;">Submitted Jan 13, 2024 by Hans Mueller</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-approve flex-grow-1"><i class="fa fa-check me-2"></i>Approve</button>
+                                        <button class="btn btn-reject flex-grow-1"><i class="fa fa-times me-2"></i>Reject</button>
+                                        <a href="hotel-detail.html" class="btn" style="background: #f0f0f0; color: var(--dark); border: none; border-radius: 8px; padding: 0.5rem 1rem; flex-grow: 1;"><i class="fa fa-eye me-2"></i>Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Card 5 -->
+                    <div class="col-sm-12 col-lg-6 col-xl-4">
+                        <div class="hotel-card">
+                            <div class="hotel-card-image">
+                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a2332, #2c3e50); color: white; font-size: 3rem;">
+                                    <i class="fa fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="hotel-card-body">
+                                <h5 class="hotel-name">Tokyo Executive</h5>
+                                <p class="hotel-location"><i class="fa fa-map-marker-alt me-2"></i>Tokyo, Japan</p>
+                                <p class="hotel-rating"><i class="fa fa-star me-2" style="color: var(--primary);"></i>4.8/5.0</p>
+                                <p style="color: #666; font-size: 0.875rem;">Urban luxury hotel in the heart of Tokyo's business district</p>
+                                <div class="mt-3 pt-3 border-top" style="border-color: var(--border);">
+                                    <p style="font-size: 0.75rem; color: #999; margin-bottom: 0.5rem;">Submitted Jan 12, 2024 by Yuki Tanaka</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-approve flex-grow-1"><i class="fa fa-check me-2"></i>Approve</button>
+                                        <button class="btn btn-reject flex-grow-1"><i class="fa fa-times me-2"></i>Reject</button>
+                                        <a href="hotel-detail.html" class="btn" style="background: #f0f0f0; color: var(--dark); border: none; border-radius: 8px; padding: 0.5rem 1rem; flex-grow: 1;"><i class="fa fa-eye me-2"></i>Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Card 6 -->
+                    <div class="col-sm-12 col-lg-6 col-xl-4">
+                        <div class="hotel-card">
+                            <div class="hotel-card-image">
+                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a2332, #2c3e50); color: white; font-size: 3rem;">
+                                    <i class="fa fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="hotel-card-body">
+                                <h5 class="hotel-name">Desert Dreams Resort</h5>
+                                <p class="hotel-location"><i class="fa fa-map-marker-alt me-2"></i>Dubai, UAE</p>
+                                <p class="hotel-rating"><i class="fa fa-star me-2" style="color: var(--primary);"></i>4.9/5.0</p>
+                                <p style="color: #666; font-size: 0.875rem;">Ultra-luxury resort with desert sunset views</p>
+                                <div class="mt-3 pt-3 border-top" style="border-color: var(--border);">
+                                    <p style="font-size: 0.75rem; color: #999; margin-bottom: 0.5rem;">Submitted Jan 11, 2024 by Ahmed Al-Mansouri</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-approve flex-grow-1"><i class="fa fa-check me-2"></i>Approve</button>
+                                        <button class="btn btn-reject flex-grow-1"><i class="fa fa-times me-2"></i>Reject</button>
+                                        <a href="hotel-detail.html" class="btn" style="background: #f0f0f0; color: var(--dark); border: none; border-radius: 8px; padding: 0.5rem 1rem; flex-grow: 1;"><i class="fa fa-eye me-2"></i>Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="text-center text-muted" style="padding: 2rem 0; border-top: 1px solid #E8E6E1;">
+                    <small>&copy; 2024 Hotel Moderation System. All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+        <!-- Content End -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

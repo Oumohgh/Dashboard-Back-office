@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hotel Moderation Panel</title>
+    <title>Gérant Dashboard - Hotel Manager</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -19,10 +19,6 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,12 +37,11 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-building me-2"></i>HÔTEL MODERATION</h3>
+                <a href="gerant-dashboard.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-bed me-2"></i>GÉRANT</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -54,15 +49,15 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
-                        <span>Admin</span>
+                        <h6 class="mb-0">Pierre Martin</h6>
+                        <span>Hôtelier</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="approvals.html" class="nav-item nav-link"><i class="fa fa-hourglass-half me-2"></i>Pending Hotels</a>
-                    <a href="approved.html" class="nav-item nav-link"><i class="fa fa-check-circle me-2"></i>Approved Hotels</a>
-                    <a href="rejected.html" class="nav-item nav-link"><i class="fa fa-times-circle me-2"></i>Rejected Hotels</a>
+                    <a href="gerant-dashboard.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="gerant-hotels.html" class="nav-item nav-link"><i class="fa fa-bed me-2"></i>My Hotels</a>
+                    <a href="gerant-hotel-create.html" class="nav-item nav-link"><i class="fa fa-plus me-2"></i>Add Hotel</a>
+                    <a href="gerant-profile.html" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Profile</a>
                     <hr class="my-3" style="border-color: rgba(255,255,255,0.1);">
                     <a href="signin.html" class="nav-item nav-link"><i class="fa fa-sign-out-alt me-2"></i>Log Out</a>
                 </div>
@@ -70,109 +65,71 @@
         </div>
         <!-- Sidebar End -->
 
-
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                <a href="gerant-dashboard.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-bed"></i></h2>
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
                 <form class="d-none d-md-flex ms-4">
-                    <input class="form-control border-0" type="search" placeholder="Search">
+                    <input class="form-control border-0" type="search" placeholder="Search hotels...">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
+                            <span class="d-none d-lg-inline-flex">Messages</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
+                                        <h6 class="fw-normal mb-0">Your hotel was approved</h6>
+                                        <small>2 hours ago</small>
                                     </div>
                                 </div>
                             </a>
-                            <hr class="dropdown-divider">
+                            <hr class="m-0">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
+                                        <h6 class="fw-normal mb-0">Admin sent feedback</h6>
+                                        <small>5 hours ago</small>
                                     </div>
                                 </div>
                             </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all message</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notificatin</span>
+                            <span class="d-none d-lg-inline-flex">Notifications</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Profile updated</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">New user added</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Password changed</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all notifications</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">John Doe</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="#" class="dropdown-item">15 minutes ago</a>
+                            <a href="#" class="dropdown-item">30 minutes ago</a>
+                            <a href="#" class="dropdown-item">1 hour ago</a>
                         </div>
                     </div>
                 </div>
             </nav>
             <!-- Navbar End -->
 
-
-            <!-- Hotel Stats Start -->
+            <!-- KPI Stats Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-sm-6 col-xl-3">
                         <div class="kpi-card">
                             <div class="p-4">
-                                <i class="fa fa-building fa-3x kpi-icon primary-gold"></i>
+                                <i class="fa fa-bed fa-3x kpi-icon primary-gold"></i>
                                 <p class="kpi-label">Total Hotels</p>
-                                <h6 class="kpi-value">184</h6>
+                                <h6 class="kpi-value">8</h6>
                             </div>
                         </div>
                     </div>
@@ -180,8 +137,8 @@
                         <div class="kpi-card">
                             <div class="p-4">
                                 <i class="fa fa-hourglass-half fa-3x kpi-icon warning-gold"></i>
-                                <p class="kpi-label">Pending Approvals</p>
-                                <h6 class="kpi-value" style="color: var(--warning);">23</h6>
+                                <p class="kpi-label">Pending Review</p>
+                                <h6 class="kpi-value" style="color: var(--warning);">2</h6>
                             </div>
                         </div>
                     </div>
@@ -189,8 +146,8 @@
                         <div class="kpi-card">
                             <div class="p-4">
                                 <i class="fa fa-check-circle fa-3x kpi-icon success-green"></i>
-                                <p class="kpi-label">Approved Hotels</p>
-                                <h6 class="kpi-value" style="color: var(--success);">156</h6>
+                                <p class="kpi-label">Approved</p>
+                                <h6 class="kpi-value" style="color: var(--success);">5</h6>
                             </div>
                         </div>
                     </div>
@@ -198,34 +155,32 @@
                         <div class="kpi-card">
                             <div class="p-4">
                                 <i class="fa fa-times-circle fa-3x kpi-icon danger-red"></i>
-                                <p class="kpi-label">Rejected Hotels</p>
-                                <h6 class="kpi-value" style="color: var(--danger);">5</h6>
+                                <p class="kpi-label">Rejected</p>
+                                <h6 class="kpi-value" style="color: var(--danger);">1</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Hotel Stats End -->
+            <!-- KPI Stats End -->
 
-
-            <!-- Recent Submissions Start -->
+            <!-- Recent Hotels Start -->
             <div class="container-fluid pt-4 px-4 mb-4">
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="table-container">
                             <div style="padding: 1.5rem;">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Recent Hotel Submissions</h6>
-                                    <a href="approvals.html" class="btn btn-primary btn-sm">View All</a>
+                                    <h6 class="mb-0">My Recent Hotels</h6>
+                                    <a href="gerant-hotels.html" class="btn btn-primary btn-sm">View All</a>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-hover mb-0">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Hotel Name</th>
-                                                <th scope="col">Location</th>
-                                                <th scope="col">Submitted By</th>
-                                                <th scope="col">Date</th>
+                                                <th scope="col">City</th>
+                                                <th scope="col">Rating</th>
                                                 <th scope="col">Status</th>
                                                 <th scope="col">Action</th>
                                             </tr>
@@ -233,43 +188,38 @@
                                         <tbody>
                                             <tr>
                                                 <td><strong>Le Luxury Plaza</strong></td>
-                                                <td>Paris, France</td>
-                                                <td>Marie Dupont</td>
-                                                <td>Jan 15, 2024</td>
-                                                <td><span class="badge badge-pending">Pending</span></td>
-                                                <td><a href="hotel-detail.html" class="btn btn-sm btn-review">Review</a></td>
+                                                <td>Paris</td>
+                                                <td>4.8 ★</td>
+                                                <td><span class="badge badge-approved">Approved</span></td>
+                                                <td><a href="gerant-hotel-show.html" class="btn btn-sm btn-review">View</a></td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Seaside Resort</strong></td>
-                                                <td>Barcelona, Spain</td>
-                                                <td>Carlos Rodriguez</td>
-                                                <td>Jan 14, 2024</td>
+                                                <td><strong>Côte Azur Resort</strong></td>
+                                                <td>Nice</td>
+                                                <td>4.5 ★</td>
                                                 <td><span class="badge badge-pending">Pending</span></td>
-                                                <td><a href="hotel-detail.html" class="btn btn-sm btn-review">Review</a></td>
+                                                <td><a href="gerant-hotel-show.html" class="btn btn-sm btn-review">View</a></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Alpine Retreat</strong></td>
-                                                <td>Zermatt, Switzerland</td>
-                                                <td>Hans Mueller</td>
-                                                <td>Jan 13, 2024</td>
+                                                <td>Chamonix</td>
+                                                <td>4.6 ★</td>
                                                 <td><span class="badge badge-approved">Approved</span></td>
-                                                <td><span style="color: var(--text-secondary); font-size: 0.875rem;">—</span></td>
+                                                <td><a href="gerant-hotel-show.html" class="btn btn-sm btn-review">View</a></td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Tokyo Executive</strong></td>
-                                                <td>Tokyo, Japan</td>
-                                                <td>Yuki Tanaka</td>
-                                                <td>Jan 12, 2024</td>
-                                                <td><span class="badge badge-approved">Approved</span></td>
-                                                <td><span style="color: var(--text-secondary); font-size: 0.875rem;">—</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Desert Dreams</strong></td>
-                                                <td>Dubai, UAE</td>
-                                                <td>Ahmed Al-Mansouri</td>
-                                                <td>Jan 10, 2024</td>
+                                                <td><strong>Provence Dreams</strong></td>
+                                                <td>Avignon</td>
+                                                <td>—</td>
                                                 <td><span class="badge badge-rejected">Rejected</span></td>
-                                                <td><span style="color: var(--text-secondary); font-size: 0.875rem;">—</span></td>
+                                                <td><a href="gerant-hotel-show.html" class="btn btn-sm btn-review">View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Riviera Boutique</strong></td>
+                                                <td>Cannes</td>
+                                                <td>4.7 ★</td>
+                                                <td><span class="badge badge-approved">Approved</span></td>
+                                                <td><a href="gerant-hotel-show.html" class="btn btn-sm btn-review">View</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -279,20 +229,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Recent Submissions End -->
-
-
+            <!-- Recent Hotels End -->
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a href="#">Hôtel Management Platform</a>, All Right Reserved.
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                            Designed &amp; Developed by <a href="#">Professional Team</a>
                         </div>
                     </div>
                 </div>
@@ -300,10 +247,6 @@
             <!-- Footer End -->
         </div>
         <!-- Content End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -314,7 +257,6 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
